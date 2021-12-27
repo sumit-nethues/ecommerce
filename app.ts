@@ -1,7 +1,7 @@
 import express, { Application } from "express";
 
 //route imports
-import productRoute from "./src/routes/productRoute";
+import { router as productRoute } from "./src/routes/productRoute";
 
 // init app
 const app: Application = express();

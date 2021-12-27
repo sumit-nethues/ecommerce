@@ -15,12 +15,11 @@ const port: number | string = process.env.PORT || 5001;
 
 // setting up listener when db connected
 connectMongoDb()
-	.then((data) => {
-		console.log(`mongoDB connected`);
-		app.listen(port, (): void => {
-			console.log(
-				`mongoDb connected with ${data.connection.host} and server successfully connected on port ${port}`
-			);
-		});
-	})
-	.catch((err) => console.log(`error ocurred while connection ${err}`));
+  .then((data) => {
+    app.listen(port, (): void => {
+      console.log(
+        `mongoDb connected with ${data.connection.host} and server successfully connected on port ${port}`
+      );
+    });
+  })
+  .catch((err) => console.log(`error ocurred while connection ${err}`));
